@@ -1,0 +1,9 @@
+# defaults file for debian-12-mariadb-administration
+---
+debian_12_mariadb_administration_databases_present: []
+
+debian_12_mariadb_administration_databases_absent: []
+
+debian_12_mariadb_administration_users_present: []
+
+debian_12_mariadb_administration_users_absent: []

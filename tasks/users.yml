@@ -1,0 +1,17 @@
+# tasks file for debian-12-mariadb-administration
+---
+- name: users | create
+  community.mysql.mysql_user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    priv: "{{ item.priv | default(item.name + '.*:ALL') }}"
+    host: "{{ item.host | default('localhost') }}"
+    state: present
+  with_items: "{{ debian_12_mariadb_administration_users_present }}"
+
+- name: users | drop
+  community.mysql.mysql_user:
+    name: "{{ item.name }}"
+    host: "{{ item.host | default('localhost') }}"
+    state: absent
+  with_items: "{{ debian_12_mariadb_administration_users_absent }}"

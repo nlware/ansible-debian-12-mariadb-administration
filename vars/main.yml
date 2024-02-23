@@ -1,0 +1,4 @@
+# vars file for debian-12-mariadb-administration
+---
+debian_12_mariadb_administration_dependencies:
+  - python3-mysqldb

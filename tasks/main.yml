@@ -1,0 +1,11 @@
+# tasks file for debian-12-mariadb-administration
+---
+
+- name: install
+  ansible.builtin.import_tasks: install.yml
+
+- name: databases
+  ansible.builtin.import_tasks: databases.yml
+
+- name: users
+  ansible.builtin.import_tasks: users.yml
