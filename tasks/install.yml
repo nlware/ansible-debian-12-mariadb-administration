@@ -1,0 +1,5 @@
+# tasks file for debian-12-mariadb-server
+---
+- name: install | dependencies
+  ansible.builtin.apt:
+    name: "{{ debian_12_mariadb_administration_dependencies }}"
